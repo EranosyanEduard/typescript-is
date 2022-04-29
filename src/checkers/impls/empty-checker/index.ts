@@ -22,8 +22,8 @@ const checker = new Checker<number, object | string>(allowedTypeIDs, (type) => {
         case typeIDs.string:
             return (v) =>
                 Array.isArray(v) || typeof v === "string"
-                    ? v.length > 0
-                    : Object.keys(v).length > 0
+                    ? v.length === 0
+                    : Object.keys(v).length === 0
         default:
             return (_) => {
                 throw new Error(errorMessages.unexpected)
