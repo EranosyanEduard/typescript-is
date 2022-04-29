@@ -1,20 +1,26 @@
 {
-  "name": "typescript-is",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {},
-  "keywords": [],
-  "author": "Eranosyan Eduard",
-  "license": "ISC",
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.10.0",
-    "@typescript-eslint/parser": "^5.10.0",
-    "eslint": "^8.5.0",
-    "eslint-config-airbnb-typescript": "^16.1.0",
-    "eslint-config-prettier": "^8.5.0",
-    "prettier": "2.5.1",
-    "typescript": "^4.5.4"
-  },
-  "type": "module"
+    "name": "typescript-is",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha"
+    },
+    "keywords": [],
+    "author": "Eranosyan Eduard",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/chai": "^4.3.1",
+        "@types/mocha": "^9.1.1",
+        "@typescript-eslint/eslint-plugin": "^5.10.0",
+        "@typescript-eslint/parser": "^5.10.0",
+        "chai": "^4.3.6",
+        "eslint": "^8.5.0",
+        "eslint-config-airbnb-typescript": "^16.1.0",
+        "eslint-config-prettier": "^8.5.0",
+        "mocha": "^9.2.2",
+        "prettier": "2.5.1",
+        "ts-node": "^10.7.0",
+        "typescript": "^4.5.4"
+    }
 }
