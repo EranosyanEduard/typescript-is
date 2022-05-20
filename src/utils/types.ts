@@ -1,17 +1,17 @@
-import { TypeName } from "../models"
+import { TypeName } from '../models'
 
 const TYPES: TypeName[] = [
-    "ARRAY",
-    "BOOLEAN",
-    "CHARACTER",
-    "FLOAT",
-    "FUNCTION",
-    "INTEGER",
-    "NULL",
-    "NUMBER",
-    "OBJECT",
-    "STRING",
-    "UNDEFINED",
+    'ARRAY',
+    'BOOLEAN',
+    'CHARACTER',
+    'FLOAT',
+    'FUNCTION',
+    'INTEGER',
+    'NULL',
+    'NUMBER',
+    'OBJECT',
+    'STRING',
+    'UNDEFINED',
 ]
 
 const TypeIdentifiers = TYPES.reduce((acc, type, index) => {

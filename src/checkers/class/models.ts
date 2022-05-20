@@ -1,4 +1,4 @@
-import { Predicate } from "../../models"
+import { Predicate } from '../../models'
 
 export interface IChecker<T, V> {
     /**

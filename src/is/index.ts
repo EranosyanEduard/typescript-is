@@ -1,3 +1,3 @@
-import { IIs, Is } from "./class"
+import { IIs, Is } from './class'
 
 export { Is, IIs }

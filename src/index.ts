@@ -1,4 +1,4 @@
-import { Is } from "./is"
+import { Is } from './is'
 
 const is = new Is()
 

@@ -1,5 +1,5 @@
-import { IChecker } from "./models"
-import { Predicate } from "../../models"
+import { IChecker } from './models'
+import { Predicate } from '../../models'
 
 class Checker<T, V> implements IChecker<T, V> {
     /**

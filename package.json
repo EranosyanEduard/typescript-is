@@ -4,6 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
+        "lint": "eslint ./src/**/*.ts --fix",
         "test": "mocha"
     },
     "keywords": [],

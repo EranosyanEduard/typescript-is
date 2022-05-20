@@ -1,4 +1,4 @@
-import Checker from "./Checker"
-import { IChecker } from "./models"
+import Checker from './Checker'
+import { IChecker } from './models'
 
 export { Checker, IChecker }

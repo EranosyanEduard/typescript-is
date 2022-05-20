@@ -18,7 +18,6 @@
             "error",
             { "argsIgnorePattern": "^_" }
         ],
-        "@typescript-eslint/quotes": ["error", "double"],
         "class-methods-use-this": "off",
         "object-curly-newline": [
             "error",

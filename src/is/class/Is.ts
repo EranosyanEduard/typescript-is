@@ -1,6 +1,6 @@
-import { IIs } from "./models"
-import checkers from "../../checkers"
-import TypeIDs from "../../utils"
+import { IIs } from './models'
+import checkers from '../../checkers'
+import TypeIDs from '../../utils'
 
 class Is implements IIs {
     empty = {
