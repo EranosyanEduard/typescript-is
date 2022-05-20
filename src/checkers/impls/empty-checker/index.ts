@@ -1,13 +1,13 @@
 import { Checker } from "../../class"
 import errorMessages from "../../utils"
-import typeIDs from "../../../utils"
+import TypeIDs from "../../../utils"
 
-const allowedTypeIDs = Object.entries(typeIDs)
+const AllowedTypeIDs = Object.entries(TypeIDs)
     .filter(([type]) => {
-        switch (<keyof typeof typeIDs>type) {
-            case "array":
-            case "object":
-            case "string":
+        switch (<keyof typeof TypeIDs>type) {
+            case "ARRAY":
+            case "OBJECT":
+            case "STRING":
                 return true
             default:
                 return false
@@ -15,11 +15,11 @@ const allowedTypeIDs = Object.entries(typeIDs)
     })
     .map(([_type, index]) => index)
 
-const checker = new Checker<number, object | string>(allowedTypeIDs, (type) => {
+const checker = new Checker<number, object | string>(AllowedTypeIDs, (type) => {
     switch (type) {
-        case typeIDs.array:
-        case typeIDs.object:
-        case typeIDs.string:
+        case TypeIDs.ARRAY:
+        case TypeIDs.OBJECT:
+        case TypeIDs.STRING:
             return (v) =>
                 Array.isArray(v) || typeof v === "string"
                     ? v.length === 0

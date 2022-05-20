@@ -1,325 +1,325 @@
 import { assert } from "chai"
 import is from ".."
-import typeIDs from "../utils"
+import TypeIDs from "../utils"
 
 describe("Тест экземпляра класса Is", () => {
-    const values: Record<keyof typeof typeIDs, any> = {
-        array: ["array"],
-        boolean: true,
-        character: "a",
-        float: 0.5,
-        function() {},
-        integer: 0,
-        null: null,
-        number: 0,
-        object: { key: "value" },
-        string: "string",
-        undefined,
+    const values: Record<keyof typeof TypeIDs, any> = {
+        ARRAY: ["array"],
+        BOOLEAN: true,
+        CHARACTER: "a",
+        FLOAT: 0.5,
+        FUNCTION() {},
+        INTEGER: 0,
+        NULL: null,
+        NUMBER: 0,
+        OBJECT: { key: "value" },
+        STRING: "string",
+        UNDEFINED: undefined,
     }
 
     describe("Тест интерфейса arr", () => {
         it("Тип аргумента Array", () => {
-            assert.isTrue(is.arr(values.array))
+            assert.isTrue(is.arr(values.ARRAY))
         })
         it("Тип аргумента Boolean", () => {
-            assert.isFalse(is.arr(values.boolean))
+            assert.isFalse(is.arr(values.BOOLEAN))
         })
         it("Аргумент типа Function", () => {
-            assert.isFalse(is.arr(values.function))
+            assert.isFalse(is.arr(values.FUNCTION))
         })
         it("Аргумент типа Null", () => {
-            assert.isFalse(is.arr(values.null))
+            assert.isFalse(is.arr(values.NULL))
         })
         it("Аргумент типа Number", () => {
-            assert.isFalse(is.arr(values.number))
+            assert.isFalse(is.arr(values.NUMBER))
         })
         it("Аргумент типа Object", () => {
-            assert.isFalse(is.arr(values.object))
+            assert.isFalse(is.arr(values.OBJECT))
         })
         it("Тип аргумента String", () => {
-            assert.isFalse(is.arr(values.string))
+            assert.isFalse(is.arr(values.STRING))
         })
         it("Аргумент типа Undefined", () => {
-            assert.isFalse(is.arr(values.undefined))
+            assert.isFalse(is.arr(values.UNDEFINED))
         })
     })
 
     describe("Тест интерфейса bool", () => {
         it("Тип аргумента Array", () => {
-            assert.isFalse(is.bool(values.array))
+            assert.isFalse(is.bool(values.ARRAY))
         })
         it("Тип аргумента Boolean", () => {
-            assert.isTrue(is.bool(values.boolean))
+            assert.isTrue(is.bool(values.BOOLEAN))
         })
         it("Аргумент типа Function", () => {
-            assert.isFalse(is.bool(values.function))
+            assert.isFalse(is.bool(values.FUNCTION))
         })
         it("Аргумент типа Null", () => {
-            assert.isFalse(is.bool(values.null))
+            assert.isFalse(is.bool(values.NULL))
         })
         it("Аргумент типа Number", () => {
-            assert.isFalse(is.bool(values.number))
+            assert.isFalse(is.bool(values.NUMBER))
         })
         it("Аргумент типа Object", () => {
-            assert.isFalse(is.bool(values.object))
+            assert.isFalse(is.bool(values.OBJECT))
         })
         it("Тип аргумента String", () => {
-            assert.isFalse(is.bool(values.string))
+            assert.isFalse(is.bool(values.STRING))
         })
         it("Аргумент типа Undefined", () => {
-            assert.isFalse(is.bool(values.undefined))
+            assert.isFalse(is.bool(values.UNDEFINED))
         })
     })
 
     describe("Тест интерфейса char", () => {
         it("Тип аргумента Array", () => {
-            assert.isFalse(is.char(values.array))
+            assert.isFalse(is.char(values.ARRAY))
         })
         it("Тип аргумента Boolean", () => {
-            assert.isFalse(is.char(values.boolean))
+            assert.isFalse(is.char(values.BOOLEAN))
         })
         it("Тип аргумента Character", () => {
-            assert.isTrue(is.char(values.character))
+            assert.isTrue(is.char(values.CHARACTER))
         })
         it("Аргумент типа Function", () => {
-            assert.isFalse(is.char(values.function))
+            assert.isFalse(is.char(values.FUNCTION))
         })
         it("Аргумент типа Null", () => {
-            assert.isFalse(is.char(values.null))
+            assert.isFalse(is.char(values.NULL))
         })
         it("Аргумент типа Number", () => {
-            assert.isFalse(is.char(values.number))
+            assert.isFalse(is.char(values.NUMBER))
         })
         it("Аргумент типа Object", () => {
-            assert.isFalse(is.char(values.object))
+            assert.isFalse(is.char(values.OBJECT))
         })
         it("Тип аргумента String", () => {
-            assert.isFalse(is.char(values.string))
+            assert.isFalse(is.char(values.STRING))
         })
         it("Аргумент типа Undefined", () => {
-            assert.isFalse(is.char(values.undefined))
+            assert.isFalse(is.char(values.UNDEFINED))
         })
     })
 
     describe("Тест интерфейса float", () => {
         it("Тип аргумента Array", () => {
-            assert.isFalse(is.float(values.array))
+            assert.isFalse(is.float(values.ARRAY))
         })
         it("Тип аргумента Boolean", () => {
-            assert.isFalse(is.float(values.boolean))
+            assert.isFalse(is.float(values.BOOLEAN))
         })
         it("Аргумент типа Float", () => {
-            assert.isTrue(is.float(values.float))
+            assert.isTrue(is.float(values.FLOAT))
         })
         it("Аргумент типа Function", () => {
-            assert.isFalse(is.float(values.function))
+            assert.isFalse(is.float(values.FUNCTION))
         })
         it("Аргумент типа Null", () => {
-            assert.isFalse(is.float(values.null))
+            assert.isFalse(is.float(values.NULL))
         })
         it("Аргумент типа Number", () => {
-            assert.isFalse(is.float(values.number))
+            assert.isFalse(is.float(values.NUMBER))
         })
         it("Аргумент типа Object", () => {
-            assert.isFalse(is.float(values.object))
+            assert.isFalse(is.float(values.OBJECT))
         })
         it("Тип аргумента String", () => {
-            assert.isFalse(is.float(values.string))
+            assert.isFalse(is.float(values.STRING))
         })
         it("Аргумент типа Undefined", () => {
-            assert.isFalse(is.float(values.undefined))
+            assert.isFalse(is.float(values.UNDEFINED))
         })
     })
 
     describe("Тест интерфейса fun", () => {
         it("Тип аргумента Array", () => {
-            assert.isFalse(is.fun(values.array))
+            assert.isFalse(is.fun(values.ARRAY))
         })
         it("Тип аргумента Boolean", () => {
-            assert.isFalse(is.fun(values.boolean))
+            assert.isFalse(is.fun(values.BOOLEAN))
         })
         it("Аргумент типа Function", () => {
-            assert.isTrue(is.fun(values.function))
+            assert.isTrue(is.fun(values.FUNCTION))
         })
         it("Аргумент типа Null", () => {
-            assert.isFalse(is.fun(values.null))
+            assert.isFalse(is.fun(values.NULL))
         })
         it("Аргумент типа Number", () => {
-            assert.isFalse(is.fun(values.number))
+            assert.isFalse(is.fun(values.NUMBER))
         })
         it("Аргумент типа Object", () => {
-            assert.isFalse(is.fun(values.object))
+            assert.isFalse(is.fun(values.OBJECT))
         })
         it("Тип аргумента String", () => {
-            assert.isFalse(is.fun(values.string))
+            assert.isFalse(is.fun(values.STRING))
         })
         it("Аргумент типа Undefined", () => {
-            assert.isFalse(is.fun(values.undefined))
+            assert.isFalse(is.fun(values.UNDEFINED))
         })
     })
 
     describe("Тест интерфейса int", () => {
         it("Тип аргумента Array", () => {
-            assert.isFalse(is.int(values.array))
+            assert.isFalse(is.int(values.ARRAY))
         })
         it("Тип аргумента Boolean", () => {
-            assert.isFalse(is.int(values.boolean))
+            assert.isFalse(is.int(values.BOOLEAN))
         })
         it("Аргумент типа Function", () => {
-            assert.isFalse(is.int(values.function))
+            assert.isFalse(is.int(values.FUNCTION))
         })
         it("Аргумент типа Integer", () => {
-            assert.isTrue(is.int(values.integer))
+            assert.isTrue(is.int(values.INTEGER))
         })
         it("Аргумент типа Null", () => {
-            assert.isFalse(is.int(values.null))
+            assert.isFalse(is.int(values.NULL))
         })
         it("Аргумент типа Number", () => {
-            assert.isTrue(is.int(values.number))
+            assert.isTrue(is.int(values.NUMBER))
         })
         it("Аргумент типа Object", () => {
-            assert.isFalse(is.int(values.object))
+            assert.isFalse(is.int(values.OBJECT))
         })
         it("Тип аргумента String", () => {
-            assert.isFalse(is.int(values.string))
+            assert.isFalse(is.int(values.STRING))
         })
         it("Аргумент типа Undefined", () => {
-            assert.isFalse(is.int(values.undefined))
+            assert.isFalse(is.int(values.UNDEFINED))
         })
     })
 
     describe("Тест интерфейса null", () => {
         it("Тип аргумента Array", () => {
-            assert.isFalse(is.null(values.array))
+            assert.isFalse(is.null(values.ARRAY))
         })
         it("Тип аргумента Boolean", () => {
-            assert.isFalse(is.null(values.boolean))
+            assert.isFalse(is.null(values.BOOLEAN))
         })
         it("Аргумент типа Function", () => {
-            assert.isFalse(is.null(values.function))
+            assert.isFalse(is.null(values.FUNCTION))
         })
         it("Аргумент типа Null", () => {
-            assert.isTrue(is.null(values.null))
+            assert.isTrue(is.null(values.NULL))
         })
         it("Аргумент типа Number", () => {
-            assert.isFalse(is.null(values.number))
+            assert.isFalse(is.null(values.NUMBER))
         })
         it("Аргумент типа Object", () => {
-            assert.isFalse(is.null(values.object))
+            assert.isFalse(is.null(values.OBJECT))
         })
         it("Тип аргумента String", () => {
-            assert.isFalse(is.null(values.string))
+            assert.isFalse(is.null(values.STRING))
         })
         it("Аргумент типа Undefined", () => {
-            assert.isFalse(is.null(values.undefined))
+            assert.isFalse(is.null(values.UNDEFINED))
         })
     })
 
     describe("Тест интерфейса num", () => {
         it("Тип аргумента Array", () => {
-            assert.isFalse(is.num(values.array))
+            assert.isFalse(is.num(values.ARRAY))
         })
         it("Тип аргумента Boolean", () => {
-            assert.isFalse(is.num(values.boolean))
+            assert.isFalse(is.num(values.BOOLEAN))
         })
         it("Аргумент типа Function", () => {
-            assert.isFalse(is.num(values.function))
+            assert.isFalse(is.num(values.FUNCTION))
         })
         it("Аргумент типа Null", () => {
-            assert.isFalse(is.num(values.null))
+            assert.isFalse(is.num(values.NULL))
         })
         it("Аргумент типа Number", () => {
-            assert.isTrue(is.num(values.number))
+            assert.isTrue(is.num(values.NUMBER))
         })
         it("Аргумент типа Object", () => {
-            assert.isFalse(is.num(values.object))
+            assert.isFalse(is.num(values.OBJECT))
         })
         it("Тип аргумента String", () => {
-            assert.isFalse(is.num(values.string))
+            assert.isFalse(is.num(values.STRING))
         })
         it("Аргумент типа Undefined", () => {
-            assert.isFalse(is.num(values.undefined))
+            assert.isFalse(is.num(values.UNDEFINED))
         })
     })
 
     describe("Тест интерфейса obj", () => {
         it("Тип аргумента Array", () => {
-            assert.isTrue(is.obj(values.array))
+            assert.isTrue(is.obj(values.ARRAY))
         })
         it("Тип аргумента Boolean", () => {
-            assert.isFalse(is.obj(values.boolean))
+            assert.isFalse(is.obj(values.BOOLEAN))
         })
         it("Аргумент типа Function", () => {
-            assert.isFalse(is.obj(values.function))
+            assert.isFalse(is.obj(values.FUNCTION))
         })
         it("Аргумент типа Null", () => {
-            assert.isFalse(is.obj(values.null))
+            assert.isFalse(is.obj(values.NULL))
         })
         it("Аргумент типа Number", () => {
-            assert.isFalse(is.obj(values.number))
+            assert.isFalse(is.obj(values.NUMBER))
         })
         it("Аргумент типа Object", () => {
-            assert.isTrue(is.obj(values.object))
+            assert.isTrue(is.obj(values.OBJECT))
         })
         it("Тип аргумента String", () => {
-            assert.isFalse(is.obj(values.string))
+            assert.isFalse(is.obj(values.STRING))
         })
         it("Аргумент типа Undefined", () => {
-            assert.isFalse(is.obj(values.undefined))
+            assert.isFalse(is.obj(values.UNDEFINED))
         })
     })
 
     describe("Тест интерфейса str", () => {
         it("Тип аргумента Array", () => {
-            assert.isFalse(is.str(values.array))
+            assert.isFalse(is.str(values.ARRAY))
         })
         it("Тип аргумента Boolean", () => {
-            assert.isFalse(is.str(values.boolean))
+            assert.isFalse(is.str(values.BOOLEAN))
         })
         it("Аргумент типа Function", () => {
-            assert.isFalse(is.str(values.function))
+            assert.isFalse(is.str(values.FUNCTION))
         })
         it("Аргумент типа Null", () => {
-            assert.isFalse(is.str(values.null))
+            assert.isFalse(is.str(values.NULL))
         })
         it("Аргумент типа Number", () => {
-            assert.isFalse(is.str(values.number))
+            assert.isFalse(is.str(values.NUMBER))
         })
         it("Аргумент типа Object", () => {
-            assert.isFalse(is.str(values.object))
+            assert.isFalse(is.str(values.OBJECT))
         })
         it("Тип аргумента String", () => {
-            assert.isTrue(is.str(values.string))
+            assert.isTrue(is.str(values.STRING))
         })
         it("Аргумент типа Undefined", () => {
-            assert.isFalse(is.str(values.undefined))
+            assert.isFalse(is.str(values.UNDEFINED))
         })
     })
 
     describe("Тест интерфейса undef", () => {
         it("Тип аргумента Array", () => {
-            assert.isFalse(is.undef(values.array))
+            assert.isFalse(is.undef(values.ARRAY))
         })
         it("Тип аргумента Boolean", () => {
-            assert.isFalse(is.undef(values.boolean))
+            assert.isFalse(is.undef(values.BOOLEAN))
         })
         it("Аргумент типа Function", () => {
-            assert.isFalse(is.undef(values.function))
+            assert.isFalse(is.undef(values.FUNCTION))
         })
         it("Аргумент типа Null", () => {
-            assert.isFalse(is.undef(values.null))
+            assert.isFalse(is.undef(values.NULL))
         })
         it("Аргумент типа Number", () => {
-            assert.isFalse(is.undef(values.number))
+            assert.isFalse(is.undef(values.NUMBER))
         })
         it("Аргумент типа Object", () => {
-            assert.isFalse(is.undef(values.object))
+            assert.isFalse(is.undef(values.OBJECT))
         })
         it("Тип аргумента String", () => {
-            assert.isFalse(is.undef(values.string))
+            assert.isFalse(is.undef(values.STRING))
         })
         it("Аргумент типа Undefined", () => {
-            assert.isTrue(is.undef(values.undefined))
+            assert.isTrue(is.undef(values.UNDEFINED))
         })
     })
 
@@ -328,7 +328,7 @@ describe("Тест экземпляра класса Is", () => {
             assert.isTrue(is.empty.arr([]))
         })
         it("Аргумент - не пустой массив", () => {
-            assert.isFalse(is.empty.arr(values.array))
+            assert.isFalse(is.empty.arr(values.ARRAY))
         })
     })
 
@@ -337,7 +337,7 @@ describe("Тест экземпляра класса Is", () => {
             assert.isTrue(is.empty.obj({}))
         })
         it("Аргумент - не пустой объект", () => {
-            assert.isFalse(is.empty.obj(values.object))
+            assert.isFalse(is.empty.obj(values.OBJECT))
         })
     })
 
@@ -346,7 +346,7 @@ describe("Тест экземпляра класса Is", () => {
             assert.isTrue(is.empty.str(""))
         })
         it("Аргумент - не пустая строка", () => {
-            assert.isFalse(is.empty.str(values.string))
+            assert.isFalse(is.empty.str(values.STRING))
         })
     })
 })

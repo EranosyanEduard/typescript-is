@@ -1,31 +1,31 @@
 import { Checker } from "../../class"
 import errorMessages from "../../utils"
-import typeIDs from "../../../utils"
+import TypeIDs from "../../../utils"
 
-const checker = new Checker(Object.values(typeIDs), (type) => {
+const checker = new Checker(Object.values(TypeIDs), (type) => {
     switch (type) {
-        case typeIDs.array:
+        case TypeIDs.ARRAY:
             return (v) => Array.isArray(v)
-        case typeIDs.character:
+        case TypeIDs.CHARACTER:
             return (v) => typeof v === "string" && v.length === 1
-        case typeIDs.float:
+        case TypeIDs.FLOAT:
             return (v) =>
                 typeof v === "number" &&
                 !Number.isInteger(v) &&
                 !Number.isNaN(v)
-        case typeIDs.integer:
+        case TypeIDs.INTEGER:
             return (v) => Number.isInteger(v)
-        case typeIDs.null:
+        case TypeIDs.NULL:
             return (v) => v === null
-        case typeIDs.object:
+        case TypeIDs.OBJECT:
             return (v) => typeof v === "object" && v !== null
         default:
             return (v) => {
-                const typeId = Object.entries(typeIDs).find(
+                const typeId = Object.entries(TypeIDs).find(
                     ([_type, id]) => id === type,
                 )
                 if (typeId !== undefined) {
-                    return typeof v === typeId[0]
+                    return typeof v === typeId[0].toLowerCase()
                 }
                 throw new Error(errorMessages.unexpected)
             }
